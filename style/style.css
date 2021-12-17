@@ -1,0 +1,23 @@
+/*
+        Page de style pour le site de 
+        Violette Dendaletche
+
+
+
+*/
+
+
+
+
+svg {
+  border : groove 10px orange;
+  height : 80vw; /* 80% largeur de l'écran*/
+}
+
+code {
+  border : solid red 2px;
+  color : lightgray;
+  background: darkgray;
+  padding : 10px;
+  border-radius : 5px;
+}
