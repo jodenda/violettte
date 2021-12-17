@@ -5,9 +5,20 @@
 
 
 */
-
-
-
+section {
+        display : flex;
+}
+article {
+        border-style: none none none groove; /* un seul côté gauche */
+        border-width: 10px;
+        border-color: orange;
+        padding : 2vw;
+}
+article + a { /* Selects the first <a> element that is placed immediately after <article> elements */
+        foont-size : 10%;
+        color : orange;
+        flex : 1;
+}
 
 svg {
   border : groove 10px orange;
