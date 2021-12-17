@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Les deux types de zones graphiques dans les pages Web</h1>
+    <p>Points communs :</p>
+    <ul>
+      <li>La largeur et la hauteur de ces zones rectangulaires doivent être définies soit :<dl>
+          <dd>dans le code CSS de la page ; exemple <br/><br/><code>
+            svg { width : 200px ; height : 80%; }
+            </code><br/><br/></dd>
+          <dd>dans la balise ouvrante ; exemple : <br/><br/><br/><code>
+            &lt; svg width="200" height="400" &gt;</code><br/><br/>
+            </dd>
+          <dd>dans du code javascript ; exemple : <br/><br/><code>
+            document.getElementById("idSVG").style.width="200";
+            document.getElementById("idSVG").style.height="400";  </code><br/><br/>
+            </dd>
+        </dl></li>
+    </ul>
+    <h2>zone SVG</h2>
+    <input type="range" min="0" max="500" value="81" id="valX" oninput="modifierX()"/>
+    <br/>
+    <svg width="500" style="height:40vw;" id="svg">
+      <rect x='81' y='147' width='43' height='43' stroke='lightgrey' stroke-width='4' fill='orange' />
+      <g id="R1" transform="translate(250 250)">
+        <!-- mickeys en rotation -->
+      <polygon points='409,232 418,222 428,208 426,194 416,193 406,201 401,212 394,223 396,229 402,233 410,230 400,250 376,264 352,268 330,266 307,258 286,245 276,229 271,214 280,215 269,212 263,219 270,214 286,247 286,271 295,283 317,285 328,278 337,270 348,267 329,287 314,292 298,292 286,286 277,270 276,260 277,270 257,260 243,237 239,222 250,193 267,186 283,192 295,200 291,172 296,151 311,137 322,134 339,141 353,160 358,150 367,164 372,189 365,216 382,208 398,211 382,208 365,216 359,197 359,178 365,165 344,167 352,185 351,205 344,222 337,205 338,186 340,172 344,166 365,164 361,152 349,140 333,133 317,130 299,129 316,112 322,95 319,75 301,62 272,62 255,69 237,87 229,113 234,130 247,137 263,140 252,148 243,161 235,144 218,132 196,135 175,145 161,167 162,193 175,210 185,219 206,219 222,213 232,204 235,228 251,254 ' style='fill:blue;stroke:blue;stroke-width:5;fill-rule:evenodd;opacity:0.67;'>
+        <animateTransform attributeName="transform" type="rotate" dur="7s" from="0" to="360" repeatCount="indefinite" />
+        <animate attributeName="cx" dur="8s" values="-20; 220; -20" repeatCount="indefinite" />
+        <animate attributeName="ry" dur="3s" values="10; 60; 10" repeatCount="indefinite" />
+      </polygon>
+</g>
+<use xlink:href="#R1" transform="rotate(72 390 150)" />
+<use xlink:href="#R1" transform="rotate(144 390 150)" />
+<use xlink:href="#R1" transform="rotate(216 390 150)" />
+<use xlink:href="#R1" transform="rotate(288 390 150)" />
+
+    </svg>
+    <script>
+      function modifierX() {
+        var x = document.getElementById("valX").value;
+        document.getElementById("svg").innerHTML = "<rect x='"+x+"' y='147' width='43' height='43' stroke='lightgrey' stroke-width='4' fill='orange' /><polygon points='409,232 418,222 428,208 426,194 416,193 406,201 401,212 394,223 396,229 402,233 410,230 400,250 376,264 352,268 330,266 307,258 286,245 276,229 271,214 280,215 269,212 263,219 270,214 286,247 286,271 295,283 317,285 328,278 337,270 348,267 329,287 314,292 298,292 286,286 277,270 276,260 277,270 257,260 243,237 239,222 250,193 267,186 283,192 295,200 291,172 296,151 311,137 322,134 339,141 353,160 358,150 367,164 372,189 365,216 382,208 398,211 382,208 365,216 359,197 359,178 365,165 344,167 352,185 351,205 344,222 337,205 338,186 340,172 344,166 365,164 361,152 349,140 333,133 317,130 299,129 316,112 322,95 319,75 301,62 272,62 255,69 237,87 229,113 234,130 247,137 263,140 252,148 243,161 235,144 218,132 196,135 175,145 161,167 162,193 175,210 185,219 206,219 222,213 232,204 235,228 251,254 ' style='fill:blue;stroke:blue;stroke-width:5;fill-rule:evenodd;opacity:0.67;' />";
+      }
+
+    </script>
+    <footer>
+      <h1>Liens utiles</h1>
+      <ul>
+        <li><a href="https://www.w3schools.com/graphics/tryit.asp?filename=trysvg_ellipses" target="_blank" title="ellipses en rotation 3D">ellipses en rotation 3D</a></li>
+        <li><a href="https://www.svgbackgrounds.com/" target="_blank" title="générateur de fond d'écran">générateur de fond d'écran</a></li>
+        <li><a href="https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank" title="wiki de SVG">wiki de SVG</a></li>
+        <li><a href="" target="_blank" title=""></a></li>
+        <li><a href="" target="_blank" title=""></a></li>
+        <li><a href="" target="_blank" title=""></a></li>
+        <li><a href="" target="_blank" title=""></a></li>
+
+      </ul>
+    </footer>
+  </body></html>
