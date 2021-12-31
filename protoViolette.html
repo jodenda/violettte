@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head><title>pour Violette</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="./style/style.css" rel="stylesheet" type="text/css" />
+  <style></style>
+</head>
+  <body>
+  <div class="grid">
+    <div class="item-1">
+      <span style="font-size: 5vw;">Violette Dendaletche</span>
+      <span class="shop">Céramiste</span>
+      <div class="overlay">
+        <img src="./ressources/photos/Violette.JPG" alt="Violette parmi ses créations" title="Violette parmi ses créations"/>
+      </div>
+    </div>
+    <div class="alt">
+      <span>Art & Decor</span>
+      <span class="shop">
+       <h2>Décoration</h2>
+      </span>
+      <div class="overlay">
+        <img src="./ressources/photos/eve001.JPG" alt="décoration sur tasse" title="décoration sur tasse"/>
+      </div>
+    </div>
+    <div class="item-1">
+      <span>Storage</span>
+      <span class="shop"></span>
+      <div class="overlay"></div>
+    </div>
+    <div class="item-1">
+      <span>Mes années à</span>
+      <span class="shop">l'ESADSE</span>
+      <div class="overlay"><article id="ESADSE">
+        <a title="réalisation lors de la préparation à la licence design d'objets de l'École supérieure d'art et design Saint-Étienne = ESADSE" 
+           href="https://fr.wikipedia.org/wiki/%C3%89cole_sup%C3%A9rieure_d%27art_et_design_Saint-%C3%89tienne" target="_blank">ESADSE</a>
+        <ul>
+          <li>
+            <details><summary>Première année</summary>
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+              </ol>
+            </details>
+          </li>
+          <li>
+            <details><summary>Première année</summary>
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+              </ol>
+            </details>
+          </li>
+          <li>
+            <details><summary>Première année</summary>
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+              </ol>
+            </details>
+          </li>
+        </ul>
+      </article></div>
+    </div>
+    <div class="item-1">
+      <span>CSS Grid Tricks</span>
+      <span class="shop"></span>
+      <div class="overlay"></div>
+    </div>
+    <div class="alt">
+      <span>Furniture</span>
+      <span class="shop"></span>
+      <div class="overlay"></div>
+    </div>
+    <div class="alt">
+      <span>Entertainment</span>
+      <span class="shop"></span>
+      <div class="overlay"></div>
+    </div>
+    <div class="">
+      <article id="ST2A">
+        <a title="réalisation lors de la préparation au bac sciences et technologies du design et des arts appliqués" href="" target="_self">STD2A</a>
+        <p>Quel est ce bac ? <a title="réalisation lors de la préparation au bac sciences et technologies du design et des arts appliqués" 
+         href="https://www.onisep.fr/Choisir-mes-etudes/Au-lycee-au-CFA/Au-lycee-general-et-technologique/La-voie-technologique-en-premiere-et-terminale/Le-bac-STD2A-sciences-et-technologies-du-design-et-des-arts-appliques" 
+                                             target="_blank">cliquer ici</a></p>
+        <ol>
+          <li>carnet de croquis  : <ul><li>intérieurs</li><li>extérieurs</li></ul>
+          </li>
+          <li>expérimentations textiles</li>
+          <li>recherche d'assises</li>
+          <li>La <a href="https://fr.wikipedia.org/wiki/Fa%C3%A7ade_(magazine)" target="_blank">façade</a> : 1<sup>ère</sup> et 4<sup>ième</sup> de couverture du magazine ...</li>
+          <li>projet pluridisciplinaire pour l'examen</li>
+        </ol>
+      </article>
+      <span class="shop"></span>
+      <div class="overlay"><article>exemple de contenu dans la class overlay</article></div>
+    </div>
+    <div class="alt">
+      <span>Tables</span>
+      <span class="shop"></span>
+      <div class="overlay"></div>
+    </div>
+    <div class="item-1 alt">
+      <span>Rugs</span>
+      <span class="shop"></span>
+      <div class="overlay"><canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+  Your browser does not support the HTML5 canvas tag.</canvas></div>
+    </div>
+  </div>
+
+
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var imgData = ctx.createImageData(100, 100);
+
+  var i;
+  for (i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i+0] = 255;
+    imgData.data[i+1] = 0;
+    imgData.data[i+2] = 0;
+    imgData.data[i+3] = 255;
+  }
+
+  ctx.putImageData(imgData, 10, 10);
+
+  const dates = document.querySelectorAll('.shop')
+
+  for(let i = 0; i < dates.length; i++) {
+    dates[i].innerHTML = "Shop"
+  }
+</script>
+
+</body>
+</html>
